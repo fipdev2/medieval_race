@@ -54,9 +54,6 @@ Este é um jogo simples de corrida de cavalos com um cenário medieval. O jogado
 
 ## Licença
 
-Este projeto é de código aberto, licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+Este projeto é de código aberto.
 
-## Agradecimentos
-
-Agradecimentos ao desenvolvedor do jogo e a todos os contribuidores que ajudaram a melhorar o código!
 
