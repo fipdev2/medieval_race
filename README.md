@@ -52,14 +52,6 @@ Este é um jogo simples de corrida de cavalos com um cenário medieval. O jogado
    - Ao iniciar o jogo, você escolherá entre **Modo Solo** ou **Modo 2 Jogadores**.
    - O jogador 1 controlará o cavalo com as teclas **WASD** e o jogador 2 (no modo 2 jogadores) controlará com as **setas direcionais**.
 
-## Como Contribuir
-
-1. Faça um fork deste repositório.
-2. Crie uma branch para suas alterações (`git checkout -b minha-feature`).
-3. Faça commit das suas alterações (`git commit -am 'Adiciona nova feature'`).
-4. Envie para o repositório remoto (`git push origin minha-feature`).
-5. Abra um Pull Request para a branch `main`.
-
 ## Licença
 
 Este projeto é de código aberto, licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
