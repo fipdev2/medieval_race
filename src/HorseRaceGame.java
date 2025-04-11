@@ -7,6 +7,8 @@ public class HorseRaceGame extends JPanel implements ActionListener {
     private Timer timer;
     private final int DELAY = 30;
 
+    Random rand = new Random();
+
     public int getHEIGHT() {
         return HEIGHT;
     }
@@ -55,10 +57,11 @@ public class HorseRaceGame extends JPanel implements ActionListener {
                 int key = e.getKeyCode();
 
                 // Player 1 - WASD
-                if (key == KeyEvent.VK_W) player1.move(0, -10);
-                if (key == KeyEvent.VK_S) player1.move(0, 10);
-                if (key == KeyEvent.VK_A) player1.move(-10, 0);
-                if (key == KeyEvent.VK_D) player1.move(10, 0);
+                if (key == KeyEvent.VK_W) player1.move(0, rand.nextInt(5)*-1);
+                if (key == KeyEvent.VK_S) player1.move(0, rand.nextInt(5));
+                if (key == KeyEvent.VK_A) player1.move(rand.nextInt(10), 0);
+                if (key == KeyEvent.VK_D) player1.move(rand.nextInt(10), 0);
+
 
                 // Player 2 - Arrows
                 if (isTwoPlayer) {
@@ -81,7 +84,6 @@ public class HorseRaceGame extends JPanel implements ActionListener {
 
     private void generateObstacles() {
         obstacles = new Obstacle[10];
-        Random rand = new Random();
         for (int i = 0; i < obstacles.length; i++) {
             int x = rand.nextInt(WIDTH - 100) + 100;
             int y = rand.nextInt(HEIGHT - 50);
@@ -99,7 +101,7 @@ public class HorseRaceGame extends JPanel implements ActionListener {
     private void checkCollisions(Horse player) {
         for (Obstacle obs : obstacles) {
             if (player.getBounds().intersects(obs.getBounds())) {
-                player.move(-5, 0); // hit penalty
+                player.move(-10, 0); // hit penalty
             }
         }
     }
